@@ -33,7 +33,7 @@ hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
 });
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
         welcomeMsg: 'Welcome to the Home Page!'
@@ -45,6 +45,13 @@ app.get('/about', (req, res) => {
         pageTitle: 'About Page',
         welcomeMsg: 'Welcome to the About Page!'
     });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    welcomeMsg: 'Welcome to the Projects Page!'
+  });
 });
 
 app.get('/bad', (req, res) => {
