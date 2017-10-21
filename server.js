@@ -66,6 +66,13 @@ app.get('/bibliography', (req, res) => {
   });
 });
 
+app.get('/links', (req, res) => {
+  res.render('links.hbs', {
+    pageTitle: 'Links Page',
+    welcomeMsg: 'Welcome to the links page.'
+  });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         messageType: 'error',
