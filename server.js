@@ -54,6 +54,18 @@ app.get('/projects', (req, res) => {
   });
 });
 
+app.get('/photos', (req, res) => {
+  res.render('photos.hbs', {
+    pageTitle: 'Photos Page'
+  });
+});
+
+app.get('/bibliography', (req, res) => {
+  res.render('bibliography', {
+    pageTitle: "Publications"
+  });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         messageType: 'error',
