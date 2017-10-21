@@ -73,6 +73,13 @@ app.get('/links', (req, res) => {
   });
 });
 
+app.get('/profile', (req, res) => {
+  res.render('profile.hbs', {
+    pageTitle: 'Profile Page',
+    welcomeMsg: 'Welcome to my profile page!'
+  });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         messageType: 'error',
